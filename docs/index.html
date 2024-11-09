@@ -21,6 +21,14 @@ body {
 
 <body>
     <div id="FloatPanel" style="color:green;text-align:center;font-size:200%;">aimatrix.com</div>
+    <div style="display:none;">
+<div style="display:none;">
+  <img
+    id="theImage"
+    src="./aimatrix_com_red_black.png"
+    width="300"
+    height="227" />
+</div>
     <canvas id="DigitalRain"></canvas>
 </body>
 
@@ -31,6 +39,8 @@ const canvas = document.getElementById('DigitalRain');
 const context = canvas.getContext('2d');
 const horizontal_logo = new Image();
 horizontal_logo.src = './aimatrix_com_red_black.png';
+const theImage = document.getElementById("theImage");
+
     
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -71,6 +81,7 @@ const draw = () => {
                 rainDrops[i]++;
         }
         context.drawImage(horizontal_logo, 0, 400); 
+        context.drawImage(theImage, 33, 71, 104, 124, 21, 20, 87, 104);
 };
 
 setInterval(draw, 50);
