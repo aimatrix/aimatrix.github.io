@@ -16,34 +16,15 @@ body {
     padding: 0;
     height: 100%;
 }
-    #wrapper{
-        position:relative;
-        width:300px;
-        height:200px;
-    }
-    #canvasTop,#DigitalRain{
-        position:absolute; top:0px; left:0px;
-        border:1px solid green;
-        width:300px;
-        height:200px;
-    }
-    #canvasTop{
-        border:1px solid red;
-    }
+
 </style>
 </head>
 
 <body>
-    <div id="FloatPanel" style="color:green;text-align:center;font-size:200%;">aimatrix.com</div>
-    <div style="display:none;">
-<div style="display:none;">
-  <img
-    id="theImage"
-    src="./aimatrix_com_red_black.png"
- />
-</div>
+<div id="FloatPanel" style="color:green;text-align:center;">
+  <img id="theImage" src="aimatrix_com_red_black.png" height="100" /></div>
+
     <canvas id="DigitalRain"></canvas>
-    <canvas id="canvasTop"></canvas>
 </body>
 
 
@@ -51,13 +32,6 @@ body {
 <script>
 const canvas = document.getElementById('DigitalRain');
 const context = canvas.getContext('2d');
-const canvasTop = document.getElementById('canvasTop');
-const contextTop = canvasTop.getContext('2d');
-    
-const horizontal_logo = new Image();
-horizontal_logo.src = './aimatrix_com_red_black.png';
-const theImage = document.getElementById("theImage");
-
     
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -97,10 +71,9 @@ const draw = () => {
         }
                 rainDrops[i]++;
         }
-        contextTop.drawImage(horizontal_logo, this.width, this.height); 
-        contextTop.drawImage(theImage, this.width, this.height); 
+
 };
 
-setInterval(draw, 50);
+setInterval(draw, 100);
 </script>
 </html>
