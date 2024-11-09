@@ -3,7 +3,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
     <title>aimatrix.com</title>
 <style>
 html {
@@ -18,7 +17,6 @@ body {
     height: 100%;
 }
 </style>
-    </style>
 </head>
 
 <body>
@@ -35,13 +33,13 @@ const context = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモ
-ヨョロヲゴゾドボポヴッン';
+const katakana1 = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメ';
+const katakana2 = 'レヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
 const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const nums = '0123456789';
 const greekletter = 'αβγδεζηθικλμνξοπρστυφχψω';
 const lowercaseletter = 'aimatrix.com';
-// const alphabet = katakana + latin + nums;
+// const alphabet = katakana1 + katakana2 + latin + nums;
 const alphabet = greekletter + lowercaseletter;
 
 const fontSize = 16;
