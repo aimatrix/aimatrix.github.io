@@ -16,6 +16,20 @@ body {
     padding: 0;
     height: 100%;
 }
+    #wrapper{
+        position:relative;
+        width:300px;
+        height:200px;
+    }
+    #canvasTop,#DigitalRain{
+        position:absolute; top:0px; left:0px;
+        border:1px solid green;
+        width:300px;
+        height:200px;
+    }
+    #canvasTop{
+        border:1px solid red;
+    }
 </style>
 </head>
 
@@ -26,10 +40,10 @@ body {
   <img
     id="theImage"
     src="./aimatrix_com_red_black.png"
-    width="300"
-    height="227" />
+ />
 </div>
     <canvas id="DigitalRain"></canvas>
+    <canvas id="canvasTop"></canvas>
 </body>
 
 
@@ -37,6 +51,9 @@ body {
 <script>
 const canvas = document.getElementById('DigitalRain');
 const context = canvas.getContext('2d');
+const canvasTop = document.getElementById('canvasTop');
+const contextTop = canvasTop.getContext('2d');
+    
 const horizontal_logo = new Image();
 horizontal_logo.src = './aimatrix_com_red_black.png';
 const theImage = document.getElementById("theImage");
@@ -80,8 +97,8 @@ const draw = () => {
         }
                 rainDrops[i]++;
         }
-        context.drawImage(horizontal_logo, 0, 400); 
-        context.drawImage(theImage, 33, 71, 104, 124, 21, 20, 87, 104);
+        contextTop.drawImage(horizontal_logo, this.width, this.height); 
+        contextTop.drawImage(theImage, this.width, this.height); 
 };
 
 setInterval(draw, 50);
