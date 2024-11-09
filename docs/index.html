@@ -21,15 +21,17 @@ body {
 
 <body>
     <div id="FloatPanel" style="color:green;text-align:center;font-size:200%;">aimatrix.com</div>
-    <canvas id="Matrix"></canvas>
+    <canvas id="DigitalRain"></canvas>
 </body>
 
 
 
 <script>
-const canvas = document.getElementById('Matrix');
+const canvas = document.getElementById('DigitalRain');
 const context = canvas.getContext('2d');
-        
+const horizontal_logo = new Image();
+horizontal_logo.src = './aimatrix_com_red_black.png';
+    
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -68,6 +70,7 @@ const draw = () => {
         }
                 rainDrops[i]++;
         }
+        context.drawImage(horizontal_logo, 0, 0); 
 };
 
 setInterval(draw, 30);
