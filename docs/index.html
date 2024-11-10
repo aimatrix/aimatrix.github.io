@@ -16,15 +16,27 @@ body {
     padding: 0;
     height: 100%;
 }
-
+canvas{
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:-1;
+}
+div{
+      position:absolute;
+      z-index:0;
+      left:12px;
+      top:10px;
+}
 </style>
 </head>
 
 <body>
-<div id="FloatPanel" style="color:green;text-align:center;">
-  <img id="theImage" src="aimatrix_com_red_black.png" height="100" /></div>
-
     <canvas id="DigitalRain"></canvas>
+
+    <div id="FloatPanel" style="color:green;text-align:center;">
+      <img id="theImage" src="aimatrix_com_red_black.png" height="100" /></div>
+
 </body>
 
 
