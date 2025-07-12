@@ -22,7 +22,7 @@ function draw(){
   glyphs.forEach((g,i)=>{
     const text = GLYPH_SET[Math.floor(Math.random()*GLYPH_SET.length)];
     const x = i*20; ctx.fillText(text, x, g.y);
-    g.y = (g.y > H + 20) ? 0 : g.y + 18 + Math.random()*50;   // varied speed
+    g.y = (g.y > H + 20) ? 0 : g.y + 18 + Math.random()*10;   // varied speed
   });
   requestAnimationFrame(draw);
 }
